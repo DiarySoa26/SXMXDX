@@ -1,0 +1,88 @@
+﻿module,depends_on,reference_count
+AN,Achat,24
+AN,Autres,12
+AN,Besoins en micas,48
+AN,CA,36
+AN,CR Nature FD,25
+AN,Détails FF FD,30
+AN,I&T,117
+AN,Invest FD,10
+AN,Prestation,24
+AN,Production,49
+AN,Sal,48
+Achat,Besoins en micas,24
+Achat,Détails Achats direct,241
+Achat,Prestation,14
+Amort,Invest FD,149
+Amort,Prestation,13
+Autres,I&T,1
+Autres,Prestation,13
+Besoins en micas,Commandes,36
+Besoins en micas,Données SOMIDA,1027
+Besoins en micas,Détails Achats direct,1
+Besoins en micas,Production,38
+CA,AN,1
+CA,CR Nature FD,1
+CA,Commandes,108
+CA,Données SOMIDA,1329
+CA,Production,17
+CR Nature FD,Achat,39
+CR Nature FD,Amort,25
+CR Nature FD,Autres,25
+CR Nature FD,CA,79
+CR Nature FD,Commandes,12
+CR Nature FD,Frais financier,25
+CR Nature FD,I&T,39
+CR Nature FD,Prestation,40
+CR Nature FD,Production,12
+CR Nature FD,Sal,61
+Calcul,Besoins en micas,1188
+Calcul,CA,1080
+Calcul,Production,216
+Commande à honorer,Production!#REF,1
+Commandes,Besoins en micas,12
+Commandes,Données SOMIDA,11
+Données SOMIDA,Commandes,2
+Données SOMIDA,Détails Achats direct,2
+Données SOMIDA,Production,2
+Détails Achats direct,Besoins en micas,133
+Détails Achats direct,Détails,1
+Détails Achats direct,Production,60
+Détails FF FD,Emprunts FD,3
+Etat_Trésorerie FD,AN,352
+Etat_Trésorerie FD,Détails FF FD,12
+FORT DAUPHIN,Recap coupeuses FD,1
+Feuil3,Org,84
+Feuil3,Sal,5
+Frais financier,Détails FF FD,12
+Frais financier,Prestation,13
+I&T, OKB TRA ABR,12
+I&T,Achat,12
+I&T,CA,12
+I&T,Commandes,36
+I&T,Prestation,25
+Invest FD,Production,13
+Organigramme,FORT DAUPHIN,3
+Prestation,Achat,26
+Prestation,Besoins en micas,12
+Prestation,CA,150
+Prestation,Commandes,36
+Prestation,Données SOMIDA,2
+Prestation,Production,29
+Primes,Besoins en micas,56
+Primes,Commandes,13
+Primes,Données SOMIDA,10
+Primes,Feuil3,14
+Primes,Org,69
+Primes,Sal,8
+Production,Besoins en micas,135
+Production,CA,36
+Production,CA!#REF,7
+Production,CR Nature FD,24
+Production,Commandes,138
+Production,Données SOMIDA,253
+Sal,Besoins en micas,56
+Sal,Feuil3,102
+Sal,Primes,328
+Stat,Besoins en micas'!#REF,432
+Stat,Données SOMIDA,324

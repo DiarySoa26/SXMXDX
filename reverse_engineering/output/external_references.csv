@@ -1,0 +1,3 @@
+﻿source_sheet,source_cell,formula,external_reference
+Calcul,D223,"=+SUBTOTAL(9,TProd[Quantité])",TProd[Quantité]
+Calcul,F223,"=+SUBTOTAL(9,TProd[Productions])",TProd[Productions]

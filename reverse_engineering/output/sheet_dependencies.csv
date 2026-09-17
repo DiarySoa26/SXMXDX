@@ -1,0 +1,125 @@
+﻿source_sheet,target_sheet,reference_count,self_reference
+ OKB TRA ABR, OKB TRA ABR,68,True
+AMPANDRANDAVA,AMPANDRANDAVA,14,True
+AN,AN,4392,True
+AN,Achat,24,False
+AN,Autres,12,False
+AN,Besoins en micas,48,False
+AN,CA,36,False
+AN,CR Nature FD,25,False
+AN,Détails FF FD,30,False
+AN,I&T,117,False
+AN,Invest FD,10,False
+AN,Prestation,24,False
+AN,Production,49,False
+AN,Sal,48,False
+Achat,Achat,294,True
+Achat,Besoins en micas,24,False
+Achat,Détails Achats direct,241,False
+Achat,Prestation,14,False
+Amort,Amort,25,True
+Amort,Invest FD,149,False
+Amort,Prestation,13,False
+Autres,Autres,15,True
+Autres,I&T,1,False
+Autres,Prestation,13,False
+BL,BL,1082,True
+Besoins en micas,Besoins en micas,4096,True
+Besoins en micas,Commandes,36,False
+Besoins en micas,Données SOMIDA,1027,False
+Besoins en micas,Détails Achats direct,1,False
+Besoins en micas,Production,38,False
+CA,AN,1,False
+CA,CA,2263,True
+CA,CR Nature FD,1,False
+CA,Commandes,108,False
+CA,Données SOMIDA,1329,False
+CA,Production,17,False
+CR Nature FD,Achat,39,False
+CR Nature FD,Amort,25,False
+CR Nature FD,Autres,25,False
+CR Nature FD,CA,79,False
+CR Nature FD,CR Nature FD,925,True
+CR Nature FD,Commandes,12,False
+CR Nature FD,Frais financier,25,False
+CR Nature FD,I&T,39,False
+CR Nature FD,Prestation,40,False
+CR Nature FD,Production,12,False
+CR Nature FD,Sal,61,False
+Calcul,Besoins en micas,1188,False
+Calcul,CA,1080,False
+Calcul,Production,216,False
+Commande à honorer,Commande à honorer,27,True
+Commande à honorer,Production!#REF,1,False
+Commandes,Besoins en micas,12,False
+Commandes,Commandes,710,True
+Commandes,Données SOMIDA,11,False
+Données SOMIDA,Commandes,2,False
+Données SOMIDA,Données SOMIDA,321,True
+Données SOMIDA,Détails Achats direct,2,False
+Données SOMIDA,Production,2,False
+Détails,Détails,170,True
+Détails Achats direct,Besoins en micas,133,False
+Détails Achats direct,Détails,1,False
+Détails Achats direct,Détails Achats direct,381,True
+Détails Achats direct,Production,60,False
+Détails FF FD,Détails FF FD,159,True
+Détails FF FD,Emprunts FD,3,False
+Emprunts FD,Emprunts FD,2586,True
+Etat_Trésorerie FD,AN,352,False
+Etat_Trésorerie FD,Détails FF FD,12,False
+Etat_Trésorerie FD,Etat_Trésorerie FD,731,True
+FORT DAUPHIN,FORT DAUPHIN,499,True
+FORT DAUPHIN,Recap coupeuses FD,1,False
+Feuil1,Feuil1,114,True
+Feuil1 (2),Feuil1 (2),24,True
+Feuil3,Feuil3,918,True
+Feuil3,Org,84,False
+Feuil3,Sal,5,False
+Frais financier,Détails FF FD,12,False
+Frais financier,Frais financier,14,True
+Frais financier,Prestation,13,False
+Goodeis,Goodeis,129,True
+I&T, OKB TRA ABR,12,False
+I&T,Achat,12,False
+I&T,CA,12,False
+I&T,Commandes,36,False
+I&T,I&T,98,True
+I&T,Prestation,25,False
+Invest FD,Invest FD,189,True
+Invest FD,Production,13,False
+OKB FP1,OKB FP1,75,True
+Org,Org,353,True
+Org (2),Org (2),398,True
+Organigramme,FORT DAUPHIN,3,False
+Prestation,Achat,26,False
+Prestation,Besoins en micas,12,False
+Prestation,CA,150,False
+Prestation,Commandes,36,False
+Prestation,Données SOMIDA,2,False
+Prestation,Prestation,810,True
+Prestation,Production,29,False
+Primes,Besoins en micas,56,False
+Primes,Commandes,13,False
+Primes,Données SOMIDA,10,False
+Primes,Feuil3,14,False
+Primes,Org,69,False
+Primes,Primes,3789,True
+Primes,Sal,8,False
+Production,Besoins en micas,135,False
+Production,CA,36,False
+Production,CA!#REF,7,False
+Production,CR Nature FD,24,False
+Production,Commandes,138,False
+Production,Données SOMIDA,253,False
+Production,Production,1457,True
+Recap coupeuses Ampandra,Recap coupeuses Ampandra,6,True
+Recap coupeuses FD,Recap coupeuses FD,27,True
+Sal,Besoins en micas,56,False
+Sal,Feuil3,102,False
+Sal,Primes,328,False
+Sal,Sal,2979,True
+Stat,Besoins en micas'!#REF,432,False
+Stat,Données SOMIDA,324,False
+Stat,Stat,1994,True
+Traitement,Traitement,430,True
