@@ -7,7 +7,7 @@ SET search_path TO sxmxdx;
 -- EXERCICE
 -- ==========================================================
 
-CREATE TABLE exercice
+CREATE TABLE IF NOT EXISTS exercice
 (
     exercice_id BIGSERIAL PRIMARY KEY,
 
@@ -38,7 +38,7 @@ CREATE TABLE exercice
 -- PARAMETRES METIER
 -- ==========================================================
 
-CREATE TABLE parametre_definition
+CREATE TABLE IF NOT EXISTS parametre_definition
 (
     parametre_id BIGSERIAL PRIMARY KEY,
 
@@ -67,7 +67,7 @@ CREATE TABLE parametre_definition
 -- VALEUR DES PARAMETRES PAR EXERCICE
 -- ==========================================================
 
-CREATE TABLE parametre_exercice
+CREATE TABLE IF NOT EXISTS parametre_exercice
 (
     parametre_exercice_id BIGSERIAL
         PRIMARY KEY,
@@ -106,7 +106,7 @@ CREATE TABLE parametre_exercice
 -- IMPORT
 -- ==========================================================
 
-CREATE TABLE import_batch
+CREATE TABLE IF NOT EXISTS import_batch
 (
     import_batch_id BIGSERIAL PRIMARY KEY,
 
@@ -145,7 +145,7 @@ CREATE TABLE import_batch
 -- ANOMALIES D'IMPORT
 -- ==========================================================
 
-CREATE TABLE import_error
+CREATE TABLE IF NOT EXISTS import_error
 (
     import_error_id BIGSERIAL PRIMARY KEY,
 
@@ -176,7 +176,7 @@ CREATE TABLE import_error
 -- REGLES METIER
 -- ==========================================================
 
-CREATE TABLE regle_metier
+CREATE TABLE IF NOT EXISTS regle_metier
 (
     regle_id BIGSERIAL PRIMARY KEY,
 
@@ -209,13 +209,13 @@ CREATE TABLE regle_metier
 -- INDEX
 -- ==========================================================
 
-CREATE INDEX idx_param_exercice
+CREATE INDEX IF NOT EXISTS idx_param_exercice
 ON parametre_exercice(exercice_id);
 
 
-CREATE INDEX idx_import_exercice
+CREATE INDEX IF NOT EXISTS idx_import_exercice
 ON import_batch(exercice_id);
 
 
-CREATE INDEX idx_regle_domaine
+CREATE INDEX IF NOT EXISTS idx_regle_domaine
 ON regle_metier(domaine);

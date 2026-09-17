@@ -14,10 +14,12 @@ MIGRATIONS = [
     PROJECT_ROOT / "database/migrations/001_core.sql",
     PROJECT_ROOT / "database/migrations/002_business.sql",
     PROJECT_ROOT / "database/migrations/003_staging.sql",
+    PROJECT_ROOT / "database/migrations/004_calculation_trace.sql",
 ]
 
 SEEDS = [
-    PROJECT_ROOT / "database/seed/001_reference.sql"
+    PROJECT_ROOT / "database/seed/001_reference.sql",
+    PROJECT_ROOT / "database/seed/002_parameters.sql"
 ]
 
 

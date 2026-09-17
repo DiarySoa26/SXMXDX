@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS staging;
 
 
-CREATE TABLE staging.import_cell
+CREATE TABLE IF NOT EXISTS staging.import_cell
 (
     staging_cell_id BIGSERIAL PRIMARY KEY,
 
@@ -31,7 +31,7 @@ CREATE TABLE staging.import_cell
 );
 
 
-CREATE INDEX idx_staging_sheet
+CREATE INDEX IF NOT EXISTS idx_staging_sheet
 ON staging.import_cell
 (
     import_batch_id,
@@ -39,7 +39,7 @@ ON staging.import_cell
 );
 
 
-CREATE INDEX idx_staging_position
+CREATE INDEX IF NOT EXISTS idx_staging_position
 ON staging.import_cell
 (
     import_batch_id,
@@ -47,3 +47,8 @@ ON staging.import_cell
     row_number,
     column_number
 );
+
+
+ALTER TABLE staging.import_cell
+ADD COLUMN IF NOT EXISTS
+cached_value TEXT;

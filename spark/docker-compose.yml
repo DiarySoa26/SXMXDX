@@ -1,0 +1,199 @@
+# services:
+
+#   postgres:
+#     image: postgres:16
+#     container_name: sxmxdx-postgres
+
+#     environment:
+#       POSTGRES_USER: sxmxdx
+#       POSTGRES_PASSWORD: diary
+#       POSTGRES_DB: sxmxdx
+
+#     ports:
+#       - "5433:5432"
+
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+#     healthcheck:
+#       test:
+#         [
+#           "CMD-SHELL",
+#           "pg_isready -U sxmxdx -d sxmxdx"
+#         ]
+#       interval: 5s
+#       timeout: 5s
+#       retries: 10
+
+
+#   spark:
+#     build:
+#       context: .
+#       dockerfile: spark/Dockerfile
+
+#     container_name: sxmxdx-spark
+
+#     working_dir: /app
+
+#     volumes:
+#       - ./pipeline:/app/pipeline
+#       - ./spark:/app/spark
+#       - ./data:/app/data
+
+#     environment:
+#       POSTGRES_HOST: postgres
+#       POSTGRES_PORT: 5432
+#       POSTGRES_DB: sxmxdx2
+#       POSTGRES_USER: sxmxdx
+#       POSTGRES_PASSWORD: diary
+
+#     depends_on:
+#       postgres:
+#         condition: service_healthy
+
+#     command:
+#       [
+#         "tail",
+#         "-f",
+#         "/dev/null"
+#       ]
+
+
+# volumes:
+#   postgres_data:
+
+
+
+
+
+# services:
+
+#   postgres:
+#     image: postgres:16
+#     container_name: sxmxdx-postgres
+
+#     environment:
+#       POSTGRES_USER: sxmxdx
+#       POSTGRES_PASSWORD: diary
+#       POSTGRES_DB: sxmxdx
+
+#     ports:
+#       - "5433:5432"
+
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+#     healthcheck:
+#       test:
+#         [
+#           "CMD-SHELL",
+#           "pg_isready -U sxmxdx -d sxmxdx"
+#         ]
+#       interval: 5s
+#       timeout: 5s
+#       retries: 10
+
+
+#   spark:
+#     build:
+#       context: .
+#       dockerfile: spark/Dockerfile
+
+#     container_name: sxmxdx-spark
+
+#     working_dir: /app
+
+#     volumes:
+#       - ./pipeline:/app/pipeline
+#       - ./spark:/app/spark
+#       - ./data:/app/data
+
+#     environment:
+#       POSTGRES_HOST: postgres
+#       POSTGRES_PORT: 5432
+#       POSTGRES_DB: sxmxdx
+#       POSTGRES_USER: sxmxdx
+#       POSTGRES_PASSWORD: diary
+
+#     depends_on:
+#       postgres:
+#         condition: service_healthy
+
+#     command:
+#       [
+#         "tail",
+#         "-f",
+#         "/dev/null"
+#       ]
+
+
+# volumes:
+#   postgres_data:
+
+
+
+
+# services:
+
+#   postgres:
+#     image: postgres:16
+#     environment:
+#       POSTGRES_USER: sxmxdx
+#       POSTGRES_PASSWORD: diary
+#       POSTGRES_DB: sxmxdx2
+
+#     ports:
+#       - "5433:5432"
+
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+#   spark:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+
+#     working_dir: /app/spark
+
+#     volumes:
+#       - .:/app/spark
+
+#     depends_on:
+#       - postgres
+
+#     command: tail -f /dev/null
+
+# volumes:
+#   postgres_data:
+
+
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: sxmxdx
+      POSTGRES_PASSWORD: diary
+      POSTGRES_DB: sxmxdx2
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    working_dir: /app
+
+    volumes:
+      - ..:/app
+
+    depends_on:
+      - postgres
+
+    command: tail -f /dev/null
+
+volumes:
+  postgres_data:

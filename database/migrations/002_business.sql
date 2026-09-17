@@ -5,7 +5,7 @@ SET search_path TO sxmxdx;
 -- 1. MOIS
 -- ==========================================================
 
-CREATE TABLE mois
+CREATE TABLE IF NOT EXISTS mois
 (
     mois_id SMALLINT PRIMARY KEY,
 
@@ -24,7 +24,7 @@ CREATE TABLE mois
 -- 2. SITES
 -- ==========================================================
 
-CREATE TABLE site
+CREATE TABLE IF NOT EXISTS site
 (
     site_id BIGSERIAL PRIMARY KEY,
 
@@ -40,7 +40,7 @@ CREATE TABLE site
 -- 3. PRODUITS
 -- ==========================================================
 
-CREATE TABLE produit
+CREATE TABLE IF NOT EXISTS produit
 (
     produit_id BIGSERIAL PRIMARY KEY,
 
@@ -60,7 +60,7 @@ CREATE TABLE produit
 -- 4. CLIENTS
 -- ==========================================================
 
-CREATE TABLE client
+CREATE TABLE IF NOT EXISTS client
 (
     client_id BIGSERIAL PRIMARY KEY,
 
@@ -78,7 +78,7 @@ CREATE TABLE client
 -- 5. COMPTES COMPTABLES
 -- ==========================================================
 
-CREATE TABLE compte_comptable
+CREATE TABLE IF NOT EXISTS compte_comptable
 (
     compte_id BIGSERIAL PRIMARY KEY,
 
@@ -100,7 +100,7 @@ CREATE TABLE compte_comptable
 -- 6. COMMANDES
 -- ==========================================================
 
-CREATE TABLE commande
+CREATE TABLE IF NOT EXISTS commande
 (
     commande_id BIGSERIAL PRIMARY KEY,
 
@@ -137,7 +137,7 @@ CREATE TABLE commande
 -- 7. COMMANDES MENSUELLES
 -- ==========================================================
 
-CREATE TABLE commande_mensuelle
+CREATE TABLE IF NOT EXISTS commande_mensuelle
 (
     commande_mensuelle_id BIGSERIAL PRIMARY KEY,
 
@@ -167,7 +167,7 @@ CREATE TABLE commande_mensuelle
 -- 8. PRODUCTION
 -- ==========================================================
 
-CREATE TABLE production_mensuelle
+CREATE TABLE IF NOT EXISTS production_mensuelle
 (
     production_id BIGSERIAL PRIMARY KEY,
 
@@ -208,7 +208,7 @@ CREATE TABLE production_mensuelle
 -- 9. BESOINS MATIERES
 -- ==========================================================
 
-CREATE TABLE besoin_matiere
+CREATE TABLE IF NOT EXISTS besoin_matiere
 (
     besoin_matiere_id BIGSERIAL PRIMARY KEY,
 
@@ -251,7 +251,7 @@ CREATE TABLE besoin_matiere
 -- 10. VENTES / CHIFFRE D'AFFAIRES
 -- ==========================================================
 
-CREATE TABLE vente
+CREATE TABLE IF NOT EXISTS vente
 (
     vente_id BIGSERIAL PRIMARY KEY,
 
@@ -302,7 +302,7 @@ CREATE TABLE vente
 -- 11. ACHATS
 -- ==========================================================
 
-CREATE TABLE achat_mensuel
+CREATE TABLE IF NOT EXISTS achat_mensuel
 (
     achat_id BIGSERIAL PRIMARY KEY,
 
@@ -343,7 +343,7 @@ CREATE TABLE achat_mensuel
 -- 12. SALAIRES / MASSE SALARIALE
 -- ==========================================================
 
-CREATE TABLE masse_salariale
+CREATE TABLE IF NOT EXISTS masse_salariale
 (
     masse_salariale_id BIGSERIAL PRIMARY KEY,
 
@@ -388,7 +388,7 @@ CREATE TABLE masse_salariale
 -- 13. PRESTATIONS
 -- ==========================================================
 
-CREATE TABLE prestation_mensuelle
+CREATE TABLE IF NOT EXISTS prestation_mensuelle
 (
     prestation_id BIGSERIAL PRIMARY KEY,
 
@@ -427,7 +427,7 @@ CREATE TABLE prestation_mensuelle
 -- 14. CHARGES
 -- ==========================================================
 
-CREATE TABLE charge_mensuelle
+CREATE TABLE IF NOT EXISTS charge_mensuelle
 (
     charge_id BIGSERIAL PRIMARY KEY,
 
@@ -458,7 +458,7 @@ CREATE TABLE charge_mensuelle
 -- 15. BALANCE COMPTABLE
 -- ==========================================================
 
-CREATE TABLE balance_mensuelle
+CREATE TABLE IF NOT EXISTS balance_mensuelle
 (
     balance_id BIGSERIAL PRIMARY KEY,
 
@@ -492,7 +492,7 @@ CREATE TABLE balance_mensuelle
 -- 16. RESULTATS BUDGETAIRES
 -- ==========================================================
 
-CREATE TABLE resultat_budgetaire
+CREATE TABLE IF NOT EXISTS resultat_budgetaire
 (
     resultat_id BIGSERIAL PRIMARY KEY,
 
@@ -528,26 +528,26 @@ CREATE TABLE resultat_budgetaire
 -- INDEX
 -- ==========================================================
 
-CREATE INDEX idx_production_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_production_exercice_mois
 ON production_mensuelle(exercice_id, mois_id);
 
-CREATE INDEX idx_besoin_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_besoin_exercice_mois
 ON besoin_matiere(exercice_id, mois_id);
 
-CREATE INDEX idx_vente_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_vente_exercice_mois
 ON vente(exercice_id, mois_id);
 
-CREATE INDEX idx_achat_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_achat_exercice_mois
 ON achat_mensuel(exercice_id, mois_id);
 
-CREATE INDEX idx_salaire_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_salaire_exercice_mois
 ON masse_salariale(exercice_id, mois_id);
 
-CREATE INDEX idx_charge_exercice_mois
+CREATE INDEX IF NOT EXISTS idx_charge_exercice_mois
 ON charge_mensuelle(exercice_id, mois_id);
 
-CREATE INDEX idx_balance_exercice_compte
+CREATE INDEX IF NOT EXISTS idx_balance_exercice_compte
 ON balance_mensuelle(exercice_id, compte_id);
 
-CREATE INDEX idx_resultat_exercice
+CREATE INDEX IF NOT EXISTS idx_resultat_exercice
 ON resultat_budgetaire(exercice_id, domaine);
